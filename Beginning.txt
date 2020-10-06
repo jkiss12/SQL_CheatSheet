@@ -1,0 +1,43 @@
+Just to pick a table to work with
+USE database_name;
+
+
+==SELECT
+
+
+SELECT * FROM table_name;
+
+SELECT 
+  t.first_name,
+  t.birth_date
+FROM table_name t
+ORDER BY first_name;
+
+SELECT
+  t.first_name AS name
+FROM table_name;
+
+
+==DISTINCT removes duplicates from query
+
+SELECT DISTINCT
+  t.first_name AS name
+FROM table_name;
+
+SELECT * 
+FROM customers
+WHERE birth_date > '1990-01-01';
+
+==AND OR 
+
+SELECT * 
+FROM customers 
+WHERE  birth_date > '1990-01-01 ' AND points > 1000;
+
+SELECT * 
+FROM customers 
+WHERE  birth_date > '1990-01-01 ' OR 
+		(points > 1000 AND state = 'VA');
+    
+
+
